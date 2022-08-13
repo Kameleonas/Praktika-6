@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <form action="submit">
+            <div class="container">
+                <h1>Payment form</h1>
+                <p>Required fields are followed by <span>*&nbsp;</span>.</p>
+                <h2>Contact information</h2>
+                <div class="firstBox">
+                    <fieldset class="first" aria-required="true">
+                        <legend class="borderTitle">Title</legend>
+                        <input name="name" id="mister" type="radio" required>
+                        <label for="mister">Mister</label>
+                        <br>
+                        <input name="name" id="miss" type="radio" required>
+                        <label for="miss">Miss</label>
+                    </fieldset>
+                </div>
+                <fieldset class="secondBox">
+                    <div class="name"><label for="name">Name:<span>*&nbsp; </span></label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="email"><label for="email">E-mail:<span>*&nbsp; </span></label>
+                        <input type="email" name="mail" id="E-mail" required>
+                    </div>
+                    <div class="pass"><label for="password">Password:<span>*&nbsp;</span></label>
+                        <input type="password" name="pass" id="pass" required>
+                    </div>
+                </fieldset>
+                <h2>Payment information</h2>
+                <fieldset class="cardType">
+                    <label for="cardType">Card type<span>*&nbsp;</span></label>
+                    <select name="card" id="card" required>
+                        <option value="maestro">MAESTRO</option>
+                        <option value="mastercard">MC</option>
+                        <option value="visa">VISA</option>
+                    </select>
+                </fieldset>
+                <fieldset class="cardNr">
+                    <label for="cardNr">Card number:<span>*&nbsp;</span></label>
+                    <input type="text" name="cardNr" id="cardNr" minlength="16" maxlength="16" required>
+                </fieldset>
+                <fieldset class="expDate">
+                    <label for="expDate">Expiration date:<span>*&nbsp;</span></label>
+                    <input class="inputCard" name="expiry" id="expiry" type="month" required>
+                    <p class="italic">formatted as mm/yy</p>
+                </fieldset>
+                <button type="submit">Validate the payment</button>
+            </div>
+        </form>
+    </body>
+
+</html>
